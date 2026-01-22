@@ -4,10 +4,11 @@ from app.cinema.bar import CinemaBar
 from app.cinema.hall import CinemaHall
 
 
-def cinema_visit(movie: str,
-                 customers: list,
+def cinema_visit(
+                 customers: list[dict],
                  hall_number: int,
-                 cleaner: str) -> None:
+                 cleaner: str,
+                 movie: str) -> None:
     list_of_instances = []
     for custus in customers:
         list_of_instances.append(Customer(name=custus["name"],
